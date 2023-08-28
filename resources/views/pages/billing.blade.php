@@ -2,6 +2,9 @@
 
 @section('content')
     @include('layouts.navbars.auth.topnav', ['title' => 'Billing'])
+
+    
+    
     <div class="container-fluid py-4">
         <div class="row">
             <div class="col-lg-8">
