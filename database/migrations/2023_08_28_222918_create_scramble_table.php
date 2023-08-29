@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('scramble', function (Blueprint $table) {
+        Schema::create('scrambles', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
             $table->string('texto_curto');

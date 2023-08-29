@@ -4,17 +4,31 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Scramble;
+use App\Models\Scrambles;
+use Dedoc\Scramble\Scramble;
+use OpenApi\Annotations as OA;
 
 class ScrambleController extends Controller
 {
 
-    /**
-     * @param string $item The todo item being updated.
+
+  /**
+     * Display a listing of Scrambles.
+     *
+     * @OA\Get(
+     *     path="/scrambles",
+     *     operationId="getScrambles",
+     *     tags={"Scramble"},
+     *     summary="Get a list of Scrambles",
+     *     description="Retrieve a list of Scrambles.",
+     *     @OA\Response(response="200", description="Successful response")
+     * )
+     *
+     * @return \Illuminate\Http\Response
      */
      public function index()
     {
-        $scrambles = Scramble::all();
+        $scrambles = Scrambles::all();
         return view('scramble.index', compact('scrambles'));
     }
 }
