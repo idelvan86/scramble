@@ -31,4 +31,13 @@ class ScrambleController extends Controller
         $scrambles = Scrambles::all();
         return view('scramble.index', compact('scrambles'));
     }
+
+
+    public function edit($id)
+    {
+        $scramble = Scrambles::find($id);
+        return view('scramble.edit', compact('scramble'));
+    }
+
+
 }

@@ -41,7 +41,7 @@ Route::get('/', function () {return redirect('/dashboard');})->middleware('auth'
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('/virtual-reality', [PageController::class, 'vr'])->name('virtual-reality');
 	Route::get('/scramble', [ScrambleController::class, 'index'])->name('scramble');
-	Route::get('/scramble/edit', [ScrambleController::class, 'edit'])->name('scramble.edit');
+	Route::get('/scramble/edit/{id}', [ScrambleController::class, 'edit'])->name('scramble.edit');
 	Route::get('/rtl', [PageController::class, 'rtl'])->name('rtl');
 	Route::get('/profile', [UserProfileController::class, 'show'])->name('profile');
 	Route::post('/profile', [UserProfileController::class, 'update'])->name('profile.update');

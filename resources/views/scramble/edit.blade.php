@@ -7,13 +7,13 @@
             <div class="col-md-10 mt-7">
                 <div class="card">
                     <div class="card-header pb-0 px-3">
-                        <h6 class="mb-0">Scrable Information</h6>
+                        <h6 class="mb-0">Editar Scramble</h6>
                     </div>
                   
                     <div class="card-body pt-4 p-3">
                         <ul class="list-group">
                             
-                            @foreach ($scrambles as $scramble)
+                            
 
                             <li class="list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
                                 <div class="d-flex flex-column">
@@ -32,7 +32,7 @@
                                             class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i>Edit</a>
                                 </div>
                             </li>
-                            @endforeach
+                            
                         </ul>
                     </div>
                 </div>
