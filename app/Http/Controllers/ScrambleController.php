@@ -26,6 +26,11 @@ class ScrambleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    /**
+     *  @response AnonymousResourceCollection<Scrambles>
+     */
+
      public function index()
     {
         $scrambles = Scrambles::all();
